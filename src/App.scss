@@ -1,0 +1,15 @@
+@import "./scss/global.scss";
+.App {
+	text-align: left;
+	background-color: $color-secondaryDark;
+	//background: linear-gradient(135deg, $color-secondaryDark, $color-secondary);
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

@@ -1,0 +1,21 @@
+.homeHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	&-logo {
+		display: flex;
+		align-self: center;
+		overflow: auto;
+		img {
+			height: 60px;
+			width: 60px;
+			align-self: center;
+		}
+		h1 {
+			padding: 0px 18px;
+		}
+	}
+	&-pagination {
+	}
+}

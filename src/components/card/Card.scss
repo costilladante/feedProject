@@ -1,0 +1,38 @@
+@import "../../scss/colors.scss";
+@import "../../scss/constants.scss";
+
+.card {
+	width: $card-width;
+	height: $card-height;
+
+	background-color: $color-white;
+	color: $color-neutral;
+	border-radius: 25px;
+	//background: linear-gradient(135deg, $color-secondaryDark, $color-secondary);
+
+	&-title {
+		h2 {
+			color: $color-primary;
+			padding-left: 2rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-height: 8rem;
+			margin-bottom: 8px;
+			margin-top: 8px;
+		}
+	}
+	& p {
+		max-height: 9rem;
+		overflow: hidden;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		//white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}
+
+.card:hover {
+	background-color: $color-secondary;
+	color: $color-white;
+	box-shadow: 4px 6px 8px 0 $color-secondary;
+}
