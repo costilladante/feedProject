@@ -8,7 +8,10 @@ function App() {
 	return (
 		<div className="App">
 			<div className="App-Header">
-				<HomeHeader title="Feed Project"></HomeHeader>
+				<HomeHeader
+					title="Feed Project"
+					//onLogoClicked={onLogoClicked}
+				></HomeHeader>
 			</div>
 			<div className="App-Body">
 				<Router>
@@ -16,7 +19,7 @@ function App() {
 						<Route exact path="/">
 							<Home></Home>
 						</Route>
-						<Route path="/post">
+						<Route path="/post/:id">
 							<PostSection></PostSection>
 						</Route>
 					</Switch>

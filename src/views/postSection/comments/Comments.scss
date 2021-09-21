@@ -1,6 +1,5 @@
-@import "../../../scss/colors.scss";
-
 .Comments {
-	padding: 1rem;
-	background-color: $color-neutral;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
