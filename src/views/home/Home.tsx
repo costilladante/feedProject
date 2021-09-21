@@ -4,11 +4,7 @@ import Pagination from "../../components/pagination/Pagination";
 import { getPosts } from "../../services/posts.service";
 import "./Home.scss";
 import { PostType } from "../../types/post.type";
-
-type PaginationType = {
-	currentPage: number;
-	totalPages: number;
-};
+import { PaginationType } from "../../types/pagination.type";
 
 const Home = () => {
 	const maxPost = 9;
@@ -73,20 +69,17 @@ const Home = () => {
 		fetchPosts();
 	}, [paginationData.currentPage]);
 
-	return (
+	return isLoading ? (
+		<div>Loading...</div>
+	) : (
 		<>
 			<span className="Home-Pagination">
 				<Pagination
-					currentPage={paginationData.currentPage}
-					totalPages={paginationData.totalPages}
+					paginationData={paginationData}
 					onPageChanged={onPageChanged}
 				></Pagination>
 			</span>
-			{isLoading ? (
-				<div>Loading...</div>
-			) : (
-				<HomeBody posts={postList}></HomeBody>
-			)}
+			<HomeBody posts={postList}></HomeBody>
 		</>
 	);
 };

@@ -1,16 +1,13 @@
 import { ChangeEvent } from "react";
+import { PaginationType } from "../../types/pagination.type";
 import "./Pagination.scss";
 export type PaginationProps = {
-	currentPage: number;
-	totalPages: number;
+	paginationData: PaginationType;
 	onPageChanged: (page: number) => void;
 };
 
-const Pagination = ({
-	currentPage = 0,
-	totalPages,
-	onPageChanged,
-}: PaginationProps) => {
+const Pagination = ({ paginationData, onPageChanged }: PaginationProps) => {
+	const { currentPage, totalPages } = paginationData;
 	const onPrevClick = () => {
 		if (currentPage > 1) {
 			onPageChanged(currentPage - 1);
