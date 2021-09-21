@@ -1,0 +1,10 @@
+@import "../../scss/colors.scss";
+@import "../../scss/constants.scss";
+
+.Home {
+	&-Pagination {
+		display: flex;
+		justify-content: flex-end;
+		padding-right: 30px;
+	}
+}
