@@ -11,10 +11,6 @@ const Pagination = ({
 	totalPages,
 	onPageChanged,
 }: PaginationProps) => {
-	//const [currentPage, setCurrentPage] = useState(1);
-	//const [totalPages, setTotalPages] = useState(props.totalPages);
-	//const { currentPage, totalPages, onPageChanged } = props;
-
 	const onPrevClick = () => {
 		if (currentPage > 1) {
 			onPageChanged(currentPage - 1);
