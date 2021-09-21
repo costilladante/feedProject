@@ -8,6 +8,9 @@
 		display: flex;
 		align-self: center;
 		overflow: auto;
+		a {
+			display: flex;
+		}
 		img {
 			height: 60px;
 			width: 60px;

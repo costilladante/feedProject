@@ -10,7 +10,9 @@ const HomeHeader = (props: HomeHeaderProps) => {
 	return (
 		<span className="homeHeader">
 			<div className="homeHeader-logo" onClick={props.onLogoClicked}>
-				<img src={logo} alt="logo"></img>
+				<a href="https://github.com/costilladante">
+					<img src={logo} alt="logo"></img>
+				</a>
 				<h1>{props.title}</h1>
 			</div>
 			<span className="homeHeader-pagination"></span>
