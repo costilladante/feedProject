@@ -11,7 +11,7 @@ interface State {
 
 const initialState = {
 	posts: [],
-	selectedPost: undefined,
+	selectedPostId: undefined,
 	paginationData: {
 		currentPage: 1,
 		totalPages: 1,
@@ -21,6 +21,8 @@ const initialState = {
 
 const postReducer = (state: State = initialState, action: Action): State => {
 	switch (action.type) {
+		case ActionType.RESET_STATE:
+			return initialState;
 		case ActionType.GET_POSTS:
 			return state;
 		case ActionType.GET_POSTS_SUCCESS:
