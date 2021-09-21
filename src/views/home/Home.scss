@@ -1,31 +1,10 @@
 @import "../../scss/colors.scss";
 @import "../../scss/constants.scss";
 
-.layout {
-	width: 100%;
-	min-height: 100vh;
-	max-height: 100%;
-	background-color: $color-secondaryDark;
-	display: grid;
-	grid-template-columns: 1fr 4fr 1fr;
-	//grid-auto-rows: 100px auto;
-	grid-template-rows: 100px 1fr;
-
-	margin: 0 auto;
-	gap: 20px;
-	align-items: center;
-
-	&-header {
-		grid-column: 2 / 3;
-		grid-row: 1 / 2;
-	}
-	&-body {
-		grid-column: 2 / 3;
-		grid-row: 2 / 5;
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax($card-width + 30px, 1fr));
-		grid-auto-rows: ($card-height + 30px) auto;
-		justify-items: center;
-		align-items: center;
+.Home {
+	&-Pagination {
+		display: flex;
+		justify-content: flex-end;
+		padding-right: 30px;
 	}
 }
