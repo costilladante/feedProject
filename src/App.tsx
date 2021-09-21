@@ -1,7 +1,7 @@
 import Home from "./views/home/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.scss";
-import Post from "./views/post/Post";
+import PostSection from "./views/postSection/PostSection";
 import HomeHeader from "./views/home/homeHeader/HomeHeader";
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
 							<Home></Home>
 						</Route>
 						<Route path="/post">
-							<Post></Post>
+							<PostSection></PostSection>
 						</Route>
 					</Switch>
 				</Router>
