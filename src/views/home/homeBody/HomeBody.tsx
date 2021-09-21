@@ -15,18 +15,19 @@ const HomeBody = (props: HomeBodyProps) => {
 
 	return (
 		<div className="HomeBody">
-			{posts.map((p) => {
-				return (
-					<Card
-						key={`card-${p.id}`}
-						title={p.title}
-						text={p.body}
-						onClick={() => {
-							onCardClicked(p.id);
-						}}
-					/>
-				);
-			})}
+			{posts &&
+				posts.map((p) => {
+					return (
+						<Card
+							key={`card-${p.id}`}
+							title={p.title}
+							text={p.body}
+							onClick={() => {
+								onCardClicked(p.id);
+							}}
+						/>
+					);
+				})}
 		</div>
 	);
 };

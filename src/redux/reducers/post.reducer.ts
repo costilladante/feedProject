@@ -37,6 +37,14 @@ const postReducer = (state: State = initialState, action: Action): State => {
 				...state,
 				selectedPostId: action.payload,
 			};
+		case ActionType.SET_CURRENT_PAGE:
+			return {
+				...state,
+				paginationData: {
+					...state.paginationData,
+					currentPage: action.payload,
+				},
+			};
 		default:
 			return state;
 	}

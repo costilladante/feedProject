@@ -1,53 +1,28 @@
 import { useState, useEffect } from "react";
 import HomeBody from "./homeBody/HomeBody";
 import Pagination from "../../components/pagination/Pagination";
-import { getPosts } from "../../services/posts.service";
+import { useDispatch } from "react-redux";
+import { useTypedSelector } from "../../hooks/hooks";
+import { getAllPosts, setCurrentPage } from "../../redux/actions/post.actions";
 import "./Home.scss";
-import { PostType } from "../../types/post.type";
-import { PaginationType } from "../../types/pagination.type";
 
 const Home = () => {
 	const maxPost = 9;
+	const dispatch = useDispatch();
+	const { posts: postList, paginationData } = useTypedSelector(
+		(state) => state.postReducer
+	);
 	const [isLoading, setIsLoading] = useState(false);
-	const [postList, setPostList] = useState<PostType[]>([]);
-	const [paginationData, setPaginationData] = useState<PaginationType>({
-		currentPage: 1,
-		totalPages: 1,
-	});
 
 	const onPageChanged = async (page: number) => {
-		setPaginationData({ ...paginationData, currentPage: page });
-
-		/* setIsLoading(true);
-		try {
-			const result = await getPosts(paginationData.currentPage, maxPost);
-			console.log("🟣 result", result);
-			const posts: [PostType] = result.data;
-			setPostList(posts);
-		} catch (error) {
-			console.log("Could not get Posts");
-		} finally {
-			setIsLoading(false);
-		} */
+		dispatch(setCurrentPage(page));
 	};
 
 	useEffect(() => {
 		const fetchPosts = async () => {
 			setIsLoading(true);
-			try {
-				const result = await getPosts(paginationData.currentPage, maxPost);
-				//console.log("🟢 result", result);
-				const posts: [PostType] = result.data;
-				const totalPages = Math.ceil(result.headers["x-total-count"] / maxPost);
-
-				setPaginationData({ currentPage: 1, totalPages });
-				//setPaginationData({ ...paginationData, totalPages });
-				setPostList(posts);
-			} catch (error) {
-				console.log("Could not get Posts");
-			} finally {
-				setIsLoading(false);
-			}
+			await dispatch(getAllPosts(paginationData.currentPage, maxPost));
+			setIsLoading(false);
 		};
 		fetchPosts();
 	}, []);
@@ -55,16 +30,8 @@ const Home = () => {
 	useEffect(() => {
 		const fetchPosts = async () => {
 			setIsLoading(true);
-			try {
-				const result = await getPosts(paginationData.currentPage, maxPost);
-				//console.log("🟣 result", result);
-				const posts: [PostType] = result.data;
-				setPostList(posts);
-			} catch (error) {
-				console.log("Could not get Posts");
-			} finally {
-				setIsLoading(false);
-			}
+			await dispatch(getAllPosts(paginationData.currentPage, maxPost));
+			setIsLoading(false);
 		};
 		fetchPosts();
 	}, [paginationData.currentPage]);

@@ -8,12 +8,11 @@ export enum ActionType {
 	GET_POSTS_SUCCESS = "GET_POSTS_SUCCESS",
 	GET_POSTS_FAILED = "GET_POSTS_FAILED",
 	SET_SELECTED_POST = "SET_SELECTED_POST",
+	SET_CURRENT_PAGE = "SET_CURRENT_PAGE",
 }
-
 interface getPostsAction {
 	type: ActionType.GET_POSTS;
 }
-
 interface getPostsSuccessAction {
 	type: ActionType.GET_POSTS_SUCCESS;
 	payload: {
@@ -21,17 +20,20 @@ interface getPostsSuccessAction {
 		paginationData: PaginationType;
 	};
 }
-
 interface getPostsFailedAction {
 	type: ActionType.GET_POSTS_FAILED;
 	payload: {
 		error: unknown;
 	};
 }
-
 interface setSelectedPostAction {
 	type: ActionType.SET_SELECTED_POST;
 	payload: number | undefined;
+}
+
+interface setCurrentPageAction {
+	type: ActionType.SET_CURRENT_PAGE;
+	payload: number;
 }
 
 export const getAllPosts = (currentPage: number, limit: number) => {
@@ -42,36 +44,24 @@ export const getAllPosts = (currentPage: number, limit: number) => {
 		try {
 			const { data, headers } = await getPosts(currentPage, limit);
 			const totalPages = Math.ceil(headers["x-total-count"] / limit);
-			getAllPostsSuccess(data, totalPages);
-		} catch (error) {
-			getAllPostsFailed(error);
-		}
-	};
-};
-
-export const getAllPostsSuccess = (posts: PostType[], totalPages: number) => {
-	return (dispatch: Dispatch<getPostsSuccessAction>) => {
-		dispatch({
-			type: ActionType.GET_POSTS_SUCCESS,
-			payload: {
-				posts,
-				paginationData: {
-					currentPage: 0,
-					totalPages,
+			dispatch({
+				type: ActionType.GET_POSTS_SUCCESS,
+				payload: {
+					posts: data,
+					paginationData: {
+						currentPage: currentPage,
+						totalPages,
+					},
 				},
-			},
-		});
-	};
-};
-
-export const getAllPostsFailed = (error: unknown) => {
-	return (dispatch: Dispatch<getPostsFailedAction>) => {
-		dispatch({
-			type: ActionType.GET_POSTS_FAILED,
-			payload: {
-				error,
-			},
-		});
+			});
+		} catch (error) {
+			dispatch({
+				type: ActionType.GET_POSTS_FAILED,
+				payload: {
+					error,
+				},
+			});
+		}
 	};
 };
 
@@ -84,8 +74,18 @@ export const setSelectedPost = (postId: number) => {
 	};
 };
 
+export const setCurrentPage = (page: number) => {
+	return (dispatch: Dispatch<setCurrentPageAction>) => {
+		dispatch({
+			type: ActionType.SET_CURRENT_PAGE,
+			payload: page,
+		});
+	};
+};
+
 export type Action =
 	| getPostsAction
 	| getPostsSuccessAction
 	| getPostsFailedAction
-	| setSelectedPostAction;
+	| setSelectedPostAction
+	| setCurrentPageAction;
