@@ -6,27 +6,27 @@
   - [Getting started](#getting-started)
   - [Folder structure](#folder-structure)
   - [Technology Stack:](#technology-stack)
-## About
+## ℹ️ About
 
 This project fetches posts and their respective comments using [JSON Placeholder API](https://jsonplaceholder.typicode.com). Posts are shown a responsive grid. Click in a post to see its details and comments.
 
-*Preview*:
+🔎 *Preview*:
 
 ![Sample](/documents/sample.gif "App Preview")
 
-## Getting started
+## 🖥️ Getting started
 
 > This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Install the dependencies before running the project with `yarn install`.
 
-Available scripts:
+*Available scripts*:
 
 - `yarn start`: runs the project
 - `yarn test`: run tests
 - `yarn build`: builds the app into the `/build` folder
 
-## Folder structure
+## 📁 Folder structure
 
 ```
 src
@@ -46,7 +46,7 @@ src
 │   └───store.ts
 │
 ├───scss                        -> Sass preprocessor files
-├───services                    -> Async functions to ? API 
+├───services                    -> Async functions / API 
 │   ├───comments.service.ts
 │   └───posts.service.ts
 │
@@ -60,9 +60,9 @@ src
         └───comments
 ```
 
-## Technology Stack:
+## 🛠️ Technology Stack
 
-These are the main libraries and framework that are being used in this project:
+These are the main libraries and frameworks that are being used in this project:
 
 - Typescript
 - React
