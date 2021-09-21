@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import PostDetails from "./postDetails/PostDetails";
 import Comments from "./comments/Comments";
 import "./PostSection.scss";
@@ -10,9 +10,15 @@ type PostSectionParams = {
 	id: string;
 };
 const PostSection = () => {
+	let history = useHistory();
 	const { id: postId } = useParams<PostSectionParams>();
 	const [isLoading, setIsLoading] = useState(false);
 	const [comments, setComments] = useState<CommentType[]>([]);
+
+	const onGoBackClicked = () => {
+		history.push("/");
+	};
+
 	useEffect(() => {
 		const fetchComments = async () => {
 			setIsLoading(true);
@@ -31,7 +37,11 @@ const PostSection = () => {
 
 	return (
 		<div className="PostSection">
-			<h2>Post Title</h2>
+			<span className="PostSection-Header">
+				<h2>Post Title</h2>
+				<button onClick={onGoBackClicked}> {"< Go back"} </button>
+			</span>
+
 			<PostDetails></PostDetails>
 			<h3>Comments ({comments.length})</h3>
 			{isLoading ? (

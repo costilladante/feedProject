@@ -5,14 +5,22 @@
 	align-items: stretch;
 	gap: 2rem;
 	padding: 20px 0;
-	&-LoadBtn {
-		background-color: $color-primary;
-		border-color: $color-neutral;
-		border-radius: 5px;
-		color: $color-white;
-		height: 4rem;
-		font-weight: 900;
-		align-self: center;
-		min-width: 200px;
+	&-Header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $color-primary;
+			border-color: $color-neutral;
+			border-radius: 25px;
+			color: $color-white;
+			height: 4rem;
+			font-weight: 900;
+			width: 140px;
+		}
 	}
 }
