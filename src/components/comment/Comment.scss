@@ -10,6 +10,7 @@
 		grid-template-columns: 4rem auto;
 		img {
 			height: 40px;
+			width: 40px;
 			grid-column: 1 / 2;
 			justify-self: center;
 			border-radius: 50%;
@@ -23,6 +24,10 @@
 			font-size: medium;
 			align-self: end;
 			padding-left: 0.5rem;
+			max-height: 2rem;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
 		&-Email {
 			grid-row: 2 / 3;

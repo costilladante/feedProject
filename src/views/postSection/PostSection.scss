@@ -23,4 +23,35 @@
 			width: 140px;
 		}
 	}
+	&-Comment {
+		display: flex;
+		flex-direction: column;
+		height: 14rem;
+		gap: 8px;
+		textarea {
+			background-color: darken($color: $color-secondaryDark, $amount: 10%);
+			height: 6rem;
+			resize: none;
+			color: $color-white;
+			border-radius: 8px;
+			border-width: 0;
+			font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			font-size: 1.2rem;
+			padding: 16px;
+		}
+
+		button {
+			align-self: flex-end;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $color-primary;
+			border-color: $color-neutral;
+			border-radius: 25px;
+			color: $color-white;
+			height: 4rem;
+			font-weight: 900;
+			width: 120px;
+		}
+	}
 }
