@@ -1,3 +1,4 @@
+import { PureComponent } from "react";
 import { CommentType } from "../../types/comment.type";
 import "./Comment.scss";
 
@@ -6,19 +7,21 @@ type CommentsProps = {
 	avatarSrc: string;
 };
 
-const Comment = (props: CommentsProps) => {
-	const { name, email, body } = props.comment;
-
-	return (
-		<div className="Comment">
-			<div className="Comment-Header">
-				<img src={props.avatarSrc} alt="avatar" />
-				<span className="Comment-Header-Name">{name}</span>
-				<span className="Comment-Header-Email">{email}</span>
+class Comment extends PureComponent<CommentsProps> {
+	render() {
+		const { comment, avatarSrc } = this.props;
+		const { name, email, body } = comment;
+		return (
+			<div className="Comment">
+				<div className="Comment-Header">
+					<img src={avatarSrc} alt="avatar" />
+					<span className="Comment-Header-Name">{name}</span>
+					<span className="Comment-Header-Email">{email}</span>
+				</div>
+				<p>{body}</p>
 			</div>
-			<p>{body}</p>
-		</div>
-	);
-};
+		);
+	}
+}
 
 export default Comment;

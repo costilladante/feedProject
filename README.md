@@ -71,3 +71,7 @@ These are the main libraries and frameworks that are being used in this project:
 - Axios
 - Sass
 - Jest
+
+## 🍻 Credits
+
+_Github_ and _Avatar_ Icons made by Freepik from www.flaticon.com
