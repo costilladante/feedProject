@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/feedProject/static/css/main.9d40e626.chunk.css",
+    "main.js": "/feedProject/static/js/main.9975f0da.chunk.js",
+    "main.js.map": "/feedProject/static/js/main.9975f0da.chunk.js.map",
+    "runtime-main.js": "/feedProject/static/js/runtime-main.2502001f.js",
+    "runtime-main.js.map": "/feedProject/static/js/runtime-main.2502001f.js.map",
+    "static/js/2.261a4e5b.chunk.js": "/feedProject/static/js/2.261a4e5b.chunk.js",
+    "static/js/2.261a4e5b.chunk.js.map": "/feedProject/static/js/2.261a4e5b.chunk.js.map",
+    "static/js/3.8fab629b.chunk.js": "/feedProject/static/js/3.8fab629b.chunk.js",
+    "static/js/3.8fab629b.chunk.js.map": "/feedProject/static/js/3.8fab629b.chunk.js.map",
+    "index.html": "/feedProject/index.html",
+    "static/css/main.9d40e626.chunk.css.map": "/feedProject/static/css/main.9d40e626.chunk.css.map",
+    "static/js/2.261a4e5b.chunk.js.LICENSE.txt": "/feedProject/static/js/2.261a4e5b.chunk.js.LICENSE.txt",
+    "static/media/github.e8c48bc7.svg": "/feedProject/static/media/github.e8c48bc7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2502001f.js",
+    "static/js/2.261a4e5b.chunk.js",
+    "static/css/main.9d40e626.chunk.css",
+    "static/js/main.9975f0da.chunk.js"
+  ]
+}
