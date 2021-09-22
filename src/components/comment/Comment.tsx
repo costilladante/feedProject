@@ -3,6 +3,7 @@ import "./Comment.scss";
 
 type CommentsProps = {
 	comment: CommentType;
+	avatarSrc: string;
 };
 
 const Comment = (props: CommentsProps) => {
@@ -10,7 +11,11 @@ const Comment = (props: CommentsProps) => {
 
 	return (
 		<div className="Comment">
-			<a href={`mailto:${email}`}>{name}</a>
+			<div className="Comment-Header">
+				<img src={props.avatarSrc} alt="avatar" />
+				<span className="Comment-Header-Name">{name}</span>
+				<span className="Comment-Header-Email">{email}</span>
+			</div>
 			<p>{body}</p>
 		</div>
 	);

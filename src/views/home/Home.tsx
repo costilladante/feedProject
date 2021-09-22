@@ -25,15 +25,6 @@ const Home = () => {
 			setIsLoading(false);
 		};
 		fetchPosts();
-	}, []);
-
-	useEffect(() => {
-		const fetchPosts = async () => {
-			setIsLoading(true);
-			await dispatch(getAllPosts(paginationData.currentPage, maxPost));
-			setIsLoading(false);
-		};
-		fetchPosts();
 	}, [paginationData.currentPage]);
 
 	return isLoading ? (

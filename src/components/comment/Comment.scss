@@ -3,4 +3,36 @@
 .Comment {
 	padding: 1rem;
 	background-color: $color-neutral;
+	border-radius: 8px;
+	&-Header {
+		display: grid;
+		grid-template-rows: 2rem 2rem;
+		grid-template-columns: 4rem auto;
+		img {
+			height: 40px;
+			grid-column: 1 / 2;
+			justify-self: center;
+			border-radius: 50%;
+			border-width: 2px;
+			border-color: $color-primary;
+			border-style: solid;
+		}
+		&-Name {
+			grid-column: 2 / 3;
+			font-weight: bold;
+			font-size: medium;
+			align-self: end;
+			padding-left: 0.5rem;
+		}
+		&-Email {
+			grid-row: 2 / 3;
+			grid-column: 2 / 3;
+			color: darken($color: $color-white, $amount: 20%);
+			align-self: start;
+			padding-left: 0.5rem;
+		}
+	}
+	p {
+		color: darken($color: $color-white, $amount: 20%);
+	}
 }
