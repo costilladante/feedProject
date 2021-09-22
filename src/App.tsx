@@ -1,5 +1,5 @@
 import Home from "./views/home/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.scss";
 import PostSection from "./views/postSection/PostSection";
 import HomeHeader from "./views/home/homeHeader/HomeHeader";
