@@ -20,7 +20,6 @@ const Comments = (props: CommentsProps) => {
 				console.log(error);
 			}
 		};
-		console.log(props.data);
 		props.data.length > 0 && generateAvatars(props.data.length);
 	}, []);
 
