@@ -21,7 +21,10 @@ const Pagination = ({ paginationData, onPageChanged }: PaginationProps) => {
 	};
 
 	const onInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-		onPageChanged(parseInt(event?.target?.value));
+		const value = parseInt(event?.target?.value);
+		if (!isNaN(value) && value > 0 && value <= totalPages) {
+			onPageChanged(value);
+		}
 	};
 
 	return (

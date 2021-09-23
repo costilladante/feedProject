@@ -29,7 +29,7 @@
 		height: 14rem;
 		gap: 8px;
 		textarea {
-			background-color: darken($color: $color-secondaryDark, $amount: 10%);
+			background-color: $color-secondary-darkest;
 			height: 6rem;
 			resize: none;
 			color: $color-white;

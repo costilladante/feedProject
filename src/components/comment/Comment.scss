@@ -32,12 +32,12 @@
 		&-Email {
 			grid-row: 2 / 3;
 			grid-column: 2 / 3;
-			color: darken($color: $color-white, $amount: 20%);
+			color: $color-white-dark;
 			align-self: start;
 			padding-left: 0.5rem;
 		}
 	}
 	p {
-		color: darken($color: $color-white, $amount: 20%);
+		color: $color-white-dark;
 	}
 }
