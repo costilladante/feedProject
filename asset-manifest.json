@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/feedProject/static/css/main.c60467ac.chunk.css",
-    "main.js": "/feedProject/static/js/main.69712781.chunk.js",
-    "main.js.map": "/feedProject/static/js/main.69712781.chunk.js.map",
+    "main.css": "/feedProject/static/css/main.eda82f6f.chunk.css",
+    "main.js": "/feedProject/static/js/main.df8e7764.chunk.js",
+    "main.js.map": "/feedProject/static/js/main.df8e7764.chunk.js.map",
     "runtime-main.js": "/feedProject/static/js/runtime-main.d85bc2d9.js",
     "runtime-main.js.map": "/feedProject/static/js/runtime-main.d85bc2d9.js.map",
     "static/js/2.a9871734.chunk.js": "/feedProject/static/js/2.a9871734.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.ba51a96d.chunk.js": "/feedProject/static/js/3.ba51a96d.chunk.js",
     "static/js/3.ba51a96d.chunk.js.map": "/feedProject/static/js/3.ba51a96d.chunk.js.map",
     "index.html": "/feedProject/index.html",
-    "static/css/main.c60467ac.chunk.css.map": "/feedProject/static/css/main.c60467ac.chunk.css.map",
+    "static/css/main.eda82f6f.chunk.css.map": "/feedProject/static/css/main.eda82f6f.chunk.css.map",
     "static/js/2.a9871734.chunk.js.LICENSE.txt": "/feedProject/static/js/2.a9871734.chunk.js.LICENSE.txt",
     "static/media/avatar.4a895b67.svg": "/feedProject/static/media/avatar.4a895b67.svg",
     "static/media/github.e8c48bc7.svg": "/feedProject/static/media/github.e8c48bc7.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.d85bc2d9.js",
     "static/js/2.a9871734.chunk.js",
-    "static/css/main.c60467ac.chunk.css",
-    "static/js/main.69712781.chunk.js"
+    "static/css/main.eda82f6f.chunk.css",
+    "static/js/main.df8e7764.chunk.js"
   ]
 }
